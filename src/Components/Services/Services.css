@@ -1,0 +1,71 @@
+.services{
+    padding: 0 3rem 2rem 3rem;
+    display: flex;
+    height: 90vh;
+    margin-bottom: 8rem;
+    margin-top: 4rem;
+    margin-bottom: 13rem;
+    position: relative;
+}
+.awesome{
+    display:flex;
+    flex-direction: column;
+    position: relative;
+    
+}
+.awesome>:nth-child(1){
+    color: var(--black);
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+.awesome>:nth-child(2){
+    color: var(--orange);
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+.awesome>:nth-child(3){
+    color: var(--gray);
+    font-size: 18px;
+    margin-top: 1rem;
+}
+.s-button{
+    width: 8rem;
+    height: 2rem;
+    margin-top: 1rem;
+}
+.card{
+    position:relative;
+    z-index: 0;
+}
+
+.cards > div{
+    position: absolute;
+}
+
+.card1 {
+  position: absolute;
+  top: 1rem;    /* Replace your previous inline values */
+  left: 65rem;
+}
+
+.card2 {
+  position: absolute;
+  top: 10rem;
+  left: 45rem;
+}
+
+.card3 {
+  position: absolute;
+  top: 20rem;
+  left: 65rem;
+}
+.s-blur2 {
+
+  right: 5rem;
+  bottom: 10rem;
+  
+}
+.s-blur1{
+    top:13rem;
+    left: -18rem;
+}

@@ -1,0 +1,35 @@
+.floatingdiv{
+    justify-content: space-around;
+    display: flex;
+    background: white;
+    box-shadow: var(--boxShadow);
+    border-radius: 17px;
+    align-items: center;
+    height: 85px;
+    width: 220px;
+    left:-9.5rem;
+    top:-1.5rem;
+    position: relative;
+    z-index: 10;
+    transition: background 0.3s ease;
+
+}
+.floatingdiv>img{
+    transform: scale(0.5);
+   
+}
+.floatingdiv>span{
+    font-family: sans-serif;
+    font-size: 20px;
+    color: var(--black);
+    transition: color 0.3s ease;
+}
+
+/* Dark Mode Styles */
+.dark-mode .floatingdiv{
+    background: rgba(36, 45, 73, 0.9);
+}
+
+.dark-mode .floatingdiv>span{
+    color: var(--white);
+}

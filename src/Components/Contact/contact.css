@@ -1,0 +1,256 @@
+.contact {
+    padding: 0 3rem 2rem 3rem;
+    display: flex;
+    gap: 3rem;
+    height: auto;
+    margin-bottom: 8rem;
+    margin-top: 4rem;
+    position: relative;
+}
+
+.contact-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    position: relative;
+}
+
+.contact-header {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.contact-header > :nth-child(1) {
+    color: var(--black);
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.contact-header > :nth-child(2) {
+    color: var(--orange);
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.contact-header > :nth-child(3) {
+    color: var(--gray);
+    font-size: 18px;
+    margin-top: 1rem;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.info-label {
+    font-weight: bold;
+    font-size: 1rem;
+    color: var(--black);
+}
+
+.info-value {
+    color: var(--gray);
+    font-size: 1rem;
+}
+
+.info-link {
+    color: var(--orange);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.info-link:hover {
+    color: var(--black);
+    text-decoration: underline;
+}
+
+.contact-social {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.contact-social img {
+    width: 2.5rem;
+    height: 2.5rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.contact-social img:hover {
+    transform: scale(1.1);
+}
+
+.contact-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    background: rgba(255, 255, 255, 0.26);
+    border: 7px solid var(--orangeCard);
+    box-shadow: var(--boxShadow);
+    border-radius: 20px;
+    padding: 2rem;
+    z-index: 1;
+}
+
+.form-input,
+.form-textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid var(--orangeCard);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.7);
+    color: var(--black);
+    font-size: 1rem;
+    font-family: "Gumela", sans-serif;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+    outline: none;
+    border-color: var(--orange);
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0px 5px 15px rgba(251, 161, 40, 0.2);
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+    color: var(--gray);
+}
+
+.form-textarea {
+    resize: vertical;
+    min-height: 120px;
+    font-family: "Gumela", sans-serif;
+}
+
+.form-button {
+    width: 100%;
+    margin-top: 0.5rem;
+    padding: 1rem;
+    font-size: 1rem;
+}
+
+.form-button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.form-status {
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+.form-status.success {
+    background: rgba(76, 175, 80, 0.2);
+    color: #2e7d32;
+    border: 1px solid rgba(76, 175, 80, 0.5);
+}
+
+.form-status.error {
+    background: rgba(244, 67, 54, 0.2);
+    color: #c62828;
+    border: 1px solid rgba(244, 67, 54, 0.5);
+}
+
+.c-blur1 {
+    top: 13rem;
+    left: -18rem;
+}
+
+.c-blur2 {
+    right: -5rem;
+    bottom: 10rem;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1200px) {
+    .contact {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .contact-left,
+    .contact-right {
+        flex: 1;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .contact {
+        padding: 0 1rem 2rem 1rem;
+    }
+
+    .contact-header > :nth-child(1),
+    .contact-header > :nth-child(2) {
+        font-size: 2rem;
+    }
+
+    .contact-form {
+        padding: 1.5rem;
+    }
+
+    .form-input,
+    .form-textarea {
+        padding: 0.8rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .contact {
+        padding: 0 0.5rem 2rem 0.5rem;
+    }
+
+    .contact-header > :nth-child(1),
+    .contact-header > :nth-child(2) {
+        font-size: 1.5rem;
+    }
+
+    .contact-info {
+        gap: 1rem;
+    }
+
+    .info-label,
+    .info-value {
+        font-size: 0.9rem;
+    }
+
+    .contact-form {
+        padding: 1rem;
+    }
+
+    .form-input,
+    .form-textarea {
+        padding: 0.7rem;
+        font-size: 0.85rem;
+    }
+
+    .contact-social img {
+        width: 2rem;
+        height: 2rem;
+    }
+}

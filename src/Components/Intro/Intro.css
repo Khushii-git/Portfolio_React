@@ -1,0 +1,143 @@
+.intro {
+    display: flex;
+    height: 77vh;
+    margin-top: 6rem;
+    position: relative;
+}
+
+.i-left {
+    display: flex;
+    position: relative;
+    flex: 1;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.i-right {
+    flex: 1;
+    position: relative;
+}
+
+.i-right > * {
+    position: absolute;
+    z-index: 1;
+}
+
+.vector1 { /* blue */
+    transform: scale(0.80);
+    left: 5%;
+    right: 20%;
+    bottom: 30%;
+}
+
+.yellow-cutout-container { /* yellow container */
+    top: -2.6rem;
+    transform: scale(0.73);
+    left: 2rem;
+    right: 10rem;
+    height: 600px;
+    width: 750px;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.vector2 { /* yellow cutout */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+    object-fit: contain;
+}
+
+.girl-image { /* khushi - clipped to yellow shape */
+    position: absolute;
+    transform: scale(1.4); /* slightly reduced for better fit */
+    left: 10%; /* adjusted to center face */
+    bottom: 13%; /* lifted to reveal face */
+    height: 100%;
+    width: auto;
+    z-index: 2;
+    object-fit: cover;
+    object-position: top center; /* ensures face is centered */
+    /* Optional: remove mask if it's hiding face */
+    mask-image: none;
+    -webkit-mask-image: none;
+}
+
+.glasses-emoji { /* emoji */
+    transform: scale(0.7);
+    top: -15%;
+    left: -10%;
+    border-radius: 50%;
+    padding: 0%;
+    z-index: 3;
+}
+
+.i-name {
+    display: flex;
+    flex-direction: column;
+}
+
+.i-name > :nth-child(1) {
+    color: var(--black);
+    font-weight: bold;
+    font-size: 3rem;
+    transition: color 0.3s ease;
+}
+
+.i-name > :nth-child(2) {
+    color: var(--orange);
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+.i-name > :nth-child(3) {
+    color: var(--grey);
+    font-weight: 100;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.i-button {
+    width: 6rem;
+    height: 2rem;
+}
+
+.i-icons {
+    margin-top: 3rem;
+    display: flex;
+    gap: 0rem;
+}
+
+.i-icons > * {
+    transform: scale(0.5);
+}
+
+.i-icons > *:hover {
+    cursor: pointer;
+}
+
+.blur {
+    position: absolute;
+    width: 22rem;
+    height: 14rem;
+    border-radius: 50%;
+    background: #edd0ff;
+    z-index: 0;
+    top: 9%;
+    left: 75%;
+    filter: blur(70px);
+}
+
+/* Dark Mode Styles */
+.dark-mode .i-name > :nth-child(1) {
+    color: var(--white);
+}
+
+.dark-mode .i-name > :nth-child(3) {
+    color: var(--gray);
+}
